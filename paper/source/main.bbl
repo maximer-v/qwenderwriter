@@ -1,0 +1,114 @@
+\begin{thebibliography}{10}
+
+\bibitem{maynez2020faithfulness}
+Joshua Maynez, Shashi Narayan, Bernd Bohnet, and Ryan McDonald.
+\newblock On faithfulness and factuality in abstractive summarization.
+\newblock In {\em Proceedings of the 58th Annual Meeting of the Association for
+  Computational Linguistics}, pages 1906--1919, 2020.
+\newblock \url{https://doi.org/10.18653/v1/2020.acl-main.173}.
+
+\bibitem{ji2023hallucination}
+Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii,
+  Ye~Jin Bang, Andrea Madotto, and Pascale Fung.
+\newblock Survey of hallucination in natural language generation.
+\newblock {\em ACM Computing Surveys}, 55(12):248:1--248:38, 2023.
+\newblock Article 248, \url{https://doi.org/10.1145/3571730}.
+
+\bibitem{nakandala2020hummingbird}
+Supun Nakandala, Karla Saur, Gyeong-In Yu, Konstantinos Karanasos, Carlo
+  Curino, Markus Weimer, and Matteo Interlandi.
+\newblock A tensor compiler for unified machine learning prediction serving.
+\newblock In {\em 14th USENIX Symposium on Operating Systems Design and
+  Implementation (OSDI)}, pages 899--917, 2020.
+\newblock
+  \url{https://www.usenix.org/conference/osdi20/presentation/nakandala}.
+
+\bibitem{lundberg2020treeshap}
+Scott~M. Lundberg, Gabriel Erion, Hugh Chen, Alex DeGrave, Jordan~M. Prutkin,
+  Bala Nair, Ronit Katz, Jonathan Himmelfarb, Nisha Bansal, and Su-In Lee.
+\newblock From local explanations to global understanding with explainable {AI}
+  for trees.
+\newblock {\em Nature Machine Intelligence}, 2(1):56--67, 2020.
+\newblock \url{https://doi.org/10.1038/s42256-019-0138-9}.
+
+\bibitem{wachter2018counterfactual}
+Sandra Wachter, Brent Mittelstadt, and Chris Russell.
+\newblock Counterfactual explanations without opening the black box: Automated
+  decisions and the {GDPR}.
+\newblock {\em Harvard Journal of Law \& Technology}, 31(2):841--887, 2018.
+
+\bibitem{ustun2019recourse}
+Berk Ustun, Alexander Spangher, and Yang Liu.
+\newblock Actionable recourse in linear classification.
+\newblock In {\em Proceedings of the Conference on Fairness, Accountability,
+  and Transparency (FAT*)}, pages 10--19, 2019.
+\newblock \url{https://doi.org/10.1145/3287560.3287566}.
+
+\bibitem{karimi2022survey}
+Amir-Hossein Karimi, Gilles Barthe, Bernhard Sch{\"o}lkopf, and Isabel Valera.
+\newblock A survey of algorithmic recourse: Contrastive explanations and
+  consequential recommendations.
+\newblock {\em ACM Computing Surveys}, 55(5):1--29, 2022.
+\newblock \url{https://doi.org/10.1145/3527848}.
+
+\bibitem{barocas2020hidden}
+Solon Barocas, Andrew~D. Selbst, and Manish Raghavan.
+\newblock The hidden assumptions behind counterfactual explanations and
+  principal reasons.
+\newblock In {\em Proceedings of the Conference on Fairness, Accountability,
+  and Transparency (FAT*)}, pages 80--89, 2020.
+\newblock \url{https://doi.org/10.1145/3351095.3372830}.
+
+\bibitem{rudin2019stop}
+Cynthia Rudin.
+\newblock Stop explaining black box machine learning models for high stakes
+  decisions and use interpretable models instead.
+\newblock {\em Nature Machine Intelligence}, 1(5):206--215, 2019.
+\newblock \url{https://doi.org/10.1038/s42256-019-0048-x}.
+
+\bibitem{uci350}
+I-Cheng Yeh.
+\newblock Default of credit card clients. {UCI} machine learning repository,
+  dataset 350.
+\newblock \url{https://doi.org/10.24432/C55S3H}, 2009.
+
+\bibitem{yeh2009comparisons}
+{I-Cheng} Yeh and {Che-hui} Lien.
+\newblock The comparisons of data mining techniques for the predictive accuracy
+  of probability of default of credit card clients.
+\newblock {\em Expert Systems with Applications}, 36(2):2473--2480, 2009.
+\newblock \url{https://doi.org/10.1016/j.eswa.2007.12.020}.
+
+\bibitem{chen2016xgboost}
+Tianqi Chen and Carlos Guestrin.
+\newblock {XGBoost}: A scalable tree boosting system.
+\newblock In {\em Proceedings of the 22nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, pages 785--794, 2016.
+\newblock \url{https://doi.org/10.1145/2939672.2939785}.
+
+\bibitem{xgboostcode}
+{XGBoost contributors}.
+\newblock {XGBoost} source code, release 3.1.2: tree split semantics in
+  \texttt{src/tree}.
+\newblock \url{https://github.com/dmlc/xgboost/tree/v3.1.2}, 2025.
+
+\bibitem{hu2022lora}
+Edward~J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean
+  Wang, Lu~Wang, and Weizhu Chen.
+\newblock {LoRA}: Low-rank adaptation of large language models.
+\newblock {\em International Conference on Learning Representations (ICLR)},
+  2022.
+\newblock \url{https://openreview.net/forum?id=nZeVKeeFYf9}.
+
+\bibitem{qwen35}
+{Qwen Team}.
+\newblock {Qwen3.5-0.8B} model card.
+\newblock \url{https://huggingface.co/Qwen/Qwen3.5-0.8B}, 2026.
+\newblock Revision \texttt{2fc06364}, Apache-2.0.
+
+\bibitem{qwen35blog}
+{Qwen Team}.
+\newblock {Qwen3.5}: Towards native multimodal agents.
+\newblock \url{https://qwen.ai/blog?id=qwen3.5}, February 2026.
+
+\end{thebibliography}

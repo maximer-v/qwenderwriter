@@ -26,14 +26,21 @@ The score, the drivers, the policy outcome and the recourse come from the compil
 paragraph. A deterministic verifier decides whether the paragraph is attached or withheld. The decision is delivered
 either way.
 
+## Paper
+
+The method, the guarantees and the full evaluation are described in the paper, included in this repository:
+
+**[Qwenderwriter: a complete credit decision system, from scorecard to verified explanation, compiled inside one 0.8B language model](paper/Qwenderwriter.pdf)**
+(Javier Mancilla and Tomás Tagliani, SquareOne Labs, 2026). The LaTeX source and figures are in [`paper/source/`](paper/source/).
+
 ## One request, one answer
 
 <p align="center">
   <img src="docs/assets/sample_io.png" alt="A raw request and the raw assessment returned by Qwenderwriter-0.8B" width="100%">
 </p>
 
-The applicant above is declined by a hard rule (severe delinquency), is shown to be **one behavioural move from approval
-with controls** (bring the six repayment statuses current; the probability would fall from 69.9% to 11.7%), and receives a
+The applicant above is declined by a policy rule (severe delinquency), is shown to be **one behavioural step away from
+approval with controls** (bring the six repayment statuses current; the probability would fall from 69.9% to 11.7%), and receives a
 verified paragraph plus a receipt from which an auditor can reproduce the whole decision without running the language
 layers. The complete JSON is in [`examples/outputs/`](examples/outputs/), one file per example request.
 
@@ -75,7 +82,7 @@ outcome, ...) is refused with an exact JSON refusal before any model code runs:
 | Can the file be tampered with? | Every call re-hashes the compiled buffers against a SHA-256 receipt in the config. One flipped bit in the compiled region makes the next call refuse to score. |
 | Can the paragraph invent a number? | Every number and feature name in it must be licensed by the evidence; anything else is withheld and the violations are listed. |
 | Is the answer reproducible? | Same request, same bytes. One-by-one and batched scoring agree; CPU and GPU agree on every deterministic field and receipt. |
-| What would change the decision? | The recourse engine re-scores candidate behavioural changes with the same compiled scorecard and reports the exact moves. Demographic fields never move. |
+| What would change the decision? | The recourse engine re-scores candidate behavioural changes with the same compiled scorecard and reports the exact steps. Demographic fields never change. |
 
 ## Results on the UCI benchmark
 
@@ -106,6 +113,7 @@ compiled_credit_llm/
 scripts/        numbered command-line entry points for every stage, plus assess.py
 notebooks/      end_to_end.ipynb: the whole pipeline, executed
 examples/       UCI example requests and their assessments
+paper/          the paper (PDF) and its LaTeX source
 docs/           architecture, policy, output schema, evaluation, model card, adapting the method to your own portfolio
 tests/          unit tests (no GPU, no artefact needed) plus artefact tests that run when the build exists
 ```
@@ -196,7 +204,8 @@ the code and the paper, and co-author of the paper. Contact: javier.m@squareonec
   author = {Mancilla, Javier and Tagliani, Tom\'as},
   year   = {2026},
   note   = {SquareOne Labs},
-  url    = {https://github.com/maximer-v/qwenderwriter}
+  url    = {https://github.com/maximer-v/qwenderwriter},
+  note   = {Paper: paper/Qwenderwriter.pdf in the repository}
 }
 ```
 
