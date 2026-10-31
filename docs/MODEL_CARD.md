@@ -51,5 +51,7 @@ each device's paragraph is verified on its own. English only.
 
 ## License and provenance
 
+Developed by Javier Mancilla (SquareOne Labs), owner of the checkpoint and the code; pair review by Tomás Tagliani (SquareOne Labs).
+
 Checkpoint and code: CC BY-NC 4.0. Base model Qwen3.5-0.8B: Apache-2.0 (tensors copied unchanged, then adapted). Teacher
 Qwen3-4B-Instruct-2507: Apache-2.0 (not part of the checkpoint). Data: UCI dataset 350, CC BY 4.0, I-Cheng Yeh.

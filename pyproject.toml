@@ -9,7 +9,8 @@ description = "Qwenderwriter-0.8B: a complete credit decision system (compiled s
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
-authors = [{name = "Javier Mancilla Montero"}]
+authors = [{name = "Javier Mancilla", email = "javier.m@squareonecap.com"}]
+maintainers = [{name = "Javier Mancilla", email = "javier.m@squareonecap.com"}]
 keywords = ["credit-risk", "explainability", "treeshap", "xgboost", "llm", "qwen", "recourse", "verified-generation", "uci"]
 classifiers = [
     "Programming Language :: Python :: 3",

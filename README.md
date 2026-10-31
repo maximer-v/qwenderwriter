@@ -181,6 +181,12 @@ them.
 * Recourse describes what the compiled scorecard and the policy would do with different behavioural inputs; it is not advice.
 * The explanation paragraph is the only free text in the output. It is verified, not trusted; when verification fails it is withheld.
 
+## Authorship
+
+Qwenderwriter was conceived and built by **Javier Mancilla** (SquareOne Labs), who owns the code and the released model
+and publishes them from a personal GitHub account. **Tomás Tagliani** (SquareOne Labs) is the pair reviewer of the design,
+the code and the paper, and co-author of the paper. Contact: javier.m@squareonecap.com.
+
 ## Citation
 
 ```bibtex
@@ -195,8 +201,8 @@ them.
 
 ## License
 
-Code, documentation and the built artefact: [CC BY-NC 4.0](LICENSE) (non-commercial). The Qwen3.5 base model is
+Copyright 2026 Javier Mancilla. Code, documentation and the built artefact: [CC BY-NC 4.0](LICENSE) (non-commercial). The Qwen3.5 base model is
 Apache-2.0, the teacher Qwen3-4B-Instruct-2507 is Apache-2.0 and the UCI data is CC BY 4.0; see
 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
-<p align="center"><sub>Built by <b>SquareOne Labs</b>, a frontier technology lab applying generative AI, quantum computing and neuromorphic/thermodynamic computing to financial services.</sub></p>
+<p align="center"><sub>Built at <b>SquareOne Labs</b>, a frontier technology lab applying generative AI, quantum computing and neuromorphic/thermodynamic computing to financial services.</sub></p>

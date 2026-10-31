@@ -1,10 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this software, please cite it as below. Javier Mancilla is the owner and corresponding author; Tomás Tagliani is the pair reviewer and co-author."
 title: "Qwenderwriter: a complete credit decision system, from scorecard to verified explanation, compiled inside one 0.8B language model"
 authors:
   - family-names: "Mancilla"
     given-names: "Javier"
     affiliation: "SquareOne Labs"
+    email: "javier.m@squareonecap.com"
   - family-names: "Tagliani"
     given-names: "Tomás"
     affiliation: "SquareOne Labs"
