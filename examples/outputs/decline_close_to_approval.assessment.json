@@ -1,0 +1,124 @@
+{
+  "protocol": "compiled-credit-llm/assessment-v1",
+  "status": "OK",
+  "decision": {
+    "outcome_code": "DD",
+    "outcome": "demonstration decline",
+    "level": "hard",
+    "controlling_rules": [
+      "severe delinquency"
+    ],
+    "note": "first active level in priority order hard > review > soft > approve"
+  },
+  "model": {
+    "probability": "0.698978159399",
+    "probability_pct": "69.9%",
+    "risk_band": "elevated",
+    "raw_margin": 0.842437
+  },
+  "policy": {
+    "id": "UCI_DEMO_POLICY_v1",
+    "priority": [
+      "hard",
+      "review",
+      "soft",
+      "approve"
+    ],
+    "active": {
+      "hard": [
+        "severe delinquency"
+      ],
+      "review": [
+        "multiple soft controls require review"
+      ],
+      "soft": [
+        "repeated delinquency",
+        "low payment coverage",
+        "elevated model risk"
+      ]
+    }
+  },
+  "drivers": {
+    "increasing_risk": [
+      {
+        "feature": "Most recent repayment status",
+        "code": "PAY_0",
+        "contribution": 1.566583
+      },
+      {
+        "feature": "Repayment status three months ago",
+        "code": "PAY_3",
+        "contribution": 0.236006
+      }
+    ],
+    "decreasing_risk": [
+      {
+        "feature": "Payment amount three months ago",
+        "code": "PAY_AMT3",
+        "contribution": -0.111109
+      },
+      {
+        "feature": "Credit limit amount",
+        "code": "LIMIT_BAL",
+        "contribution": -0.108503
+      }
+    ]
+  },
+  "calculations": {
+    "current_utilization_pct": 58.93,
+    "max_utilization_pct": 62.67,
+    "avg_utilization_pct": 60.26,
+    "delinquent_statuses": 5,
+    "repeated_delinquency": true,
+    "max_severity": 3,
+    "payment_coverage_pct": 3.56,
+    "balance_trend_pct": -3.44,
+    "bill_dispersion": 3455,
+    "payment_dispersion": 2863,
+    "zero_payment_stress": false,
+    "positive_bill_total": 723147,
+    "payment_total": 25768
+  },
+  "data_quality": [
+    "a repayment code is undocumented in the UCI source"
+  ],
+  "recourse": {
+    "current_outcome": "demonstration decline",
+    "current_outcome_code": "DD",
+    "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+    "non_behavioural_blockers": [],
+    "status": "REACHABLE",
+    "next_better": {
+      "outcome": "approval with controls",
+      "outcome_code": "AC",
+      "moves_needed": 1,
+      "moves": [
+        "all six repayment statuses paid on time (no month in delay)"
+      ],
+      "fields_changed": 5,
+      "model_after": {
+        "risk_band": "low",
+        "probability_pct": "11.7%"
+      }
+    },
+    "best_reachable": {
+      "outcome": "standard demonstration approval",
+      "outcome_code": "AS",
+      "moves_needed": 2,
+      "moves": [
+        "all six repayment statuses paid on time (no month in delay)",
+        "total payments over the six months of at least 72,315 instead of 25,768 (payment coverage 10.00% of positive bills)"
+      ],
+      "fields_changed": 6,
+      "model_after": {
+        "risk_band": "low",
+        "probability_pct": "9.8%"
+      }
+    },
+    "proximity": "close"
+  },
+  "explanation": "The decision is demonstration decline controlled by severe delinquency. The model assigns a 69.9% probability of DEFAULT, placing the risk_band in elevated. Key risk-increasing drivers include most recent repayment status and repayment status three months ago, while risk-decreasing factors are payment amount three months ago and credit limit amount. Calculations show current utilization at 58.93%, max at 62.67%, five delinquent statuses, payment coverage at 3.56%, and a balance trend of -3.44%. A data-quality flag notes a repayment code is undocumented in the UCI source. The case is close to approval with controls, requiring all six repayment statuses to be paid on time with no month in delay. The probability is an association from a benchmark model, not a cause and not a guarantee.",
+  "explanation_status": "VERIFIED",
+  "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+  "receipt": "RECEIPT1|p=UDP1|s=842436674|q=0.698978159399|o=DD|b=E|f=UR|t=DS,RM,CD,CP,CE|c=cu:5893,mu:6267,au:6026,dc:5,rd:1,ms:3,pc:356,bt:-344,bd:3455,pd:2863,zs:0,pb:723147,pt:25768|xp=PAY_0:1566582684,PAY_3:236005770|xn=PAY_AMT3:-111109176,LIMIT_BAL:-108502860|r=DS|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+}

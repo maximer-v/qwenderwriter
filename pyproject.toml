@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qwenderwriter"
+version = "1.0.0"
+description = "Qwenderwriter-0.8B: a complete credit decision system (compiled scorecard, exact TreeSHAP, policy, recourse, verified explanation, receipt) inside one 0.8B language model."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+authors = [{name = "Javier Mancilla Montero"}]
+keywords = ["credit-risk", "explainability", "treeshap", "xgboost", "llm", "qwen", "recourse", "verified-generation", "uci"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "scikit-learn>=1.3",
+    "scipy>=1.10",
+    "xgboost==3.1.2",
+    "torch>=2.4",
+    "transformers>=5.0",
+    "safetensors>=0.4",
+    "peft>=0.14",
+    "accelerate>=0.30",
+    "huggingface_hub>=0.25",
+    "xlrd>=2.0",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyter", "nbconvert", "matplotlib"]
+test = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["compiled_credit_llm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

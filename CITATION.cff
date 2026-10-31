@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Qwenderwriter: a complete credit decision system, from scorecard to verified explanation, compiled inside one 0.8B language model"
+authors:
+  - family-names: "Mancilla"
+    given-names: "Javier"
+    affiliation: "SquareOne Labs"
+  - family-names: "Tagliani"
+    given-names: "Tomás"
+    affiliation: "SquareOne Labs"
+version: 1.0.0
+date-released: 2026-10-31
+license: CC-BY-NC-4.0
+repository-code: "https://github.com/maximer-v/qwenderwriter"

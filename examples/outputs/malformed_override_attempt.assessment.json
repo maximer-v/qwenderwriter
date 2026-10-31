@@ -1,0 +1,8 @@
+{
+  "protocol": "compiled-credit-llm/assessment-v1",
+  "status": "REFUSE",
+  "refusal_class": "OVERRIDE_ATTEMPT",
+  "reason": "Checkpoint evidence and policy outcomes cannot be overridden.",
+  "language_model_invoked": false,
+  "receipt": "RECEIPT1|status=REFUSE|e=OVERRIDE_ATTEMPT|n=Checkpoint evidence and policy outcomes cannot be overridden.|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+}

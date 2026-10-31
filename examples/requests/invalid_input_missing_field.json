@@ -1,0 +1,28 @@
+{
+  "action": "ASSESS",
+  "credit": {
+    "LIMIT_BAL": 10000,
+    "SEX": null,
+    "EDUCATION": 3,
+    "MARRIAGE": 2,
+    "AGE": 50,
+    "PAY_0": 3,
+    "PAY_2": 2,
+    "PAY_3": 2,
+    "PAY_4": 2,
+    "PAY_5": 2,
+    "PAY_6": 2,
+    "BILL_AMT1": 600,
+    "BILL_AMT2": 600,
+    "BILL_AMT3": 600,
+    "BILL_AMT4": 600,
+    "BILL_AMT5": 600,
+    "BILL_AMT6": 2050,
+    "PAY_AMT1": 0,
+    "PAY_AMT2": 0,
+    "PAY_AMT3": 0,
+    "PAY_AMT4": 0,
+    "PAY_AMT5": 1450,
+    "PAY_AMT6": 0
+  }
+}

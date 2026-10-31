@@ -1,0 +1,103 @@
+{
+  "protocol": "compiled-credit-llm/assessment-v1",
+  "status": "OK",
+  "decision": {
+    "outcome_code": "II",
+    "outcome": "invalid input",
+    "level": "hard",
+    "controlling_rules": [
+      "a required input is missing"
+    ],
+    "note": "first active level in priority order hard > review > soft > approve"
+  },
+  "model": {
+    "probability": "0.843337848555",
+    "probability_pct": "84.3%",
+    "risk_band": "high",
+    "raw_margin": 1.683276
+  },
+  "policy": {
+    "id": "UCI_DEMO_POLICY_v1",
+    "priority": [
+      "hard",
+      "review",
+      "soft",
+      "approve"
+    ],
+    "active": {
+      "hard": [
+        "a required input is missing",
+        "severe delinquency"
+      ],
+      "review": [
+        "an unknown category requires review",
+        "a feature is outside the development range",
+        "the model risk band requires review"
+      ],
+      "soft": [
+        "repeated delinquency"
+      ]
+    }
+  },
+  "drivers": {
+    "increasing_risk": [
+      {
+        "feature": "Most recent repayment status",
+        "code": "PAY_0",
+        "contribution": 1.251132
+      },
+      {
+        "feature": "Repayment status two months ago",
+        "code": "PAY_2",
+        "contribution": 0.218429
+      }
+    ],
+    "decreasing_risk": [
+      {
+        "feature": "Statement balance three months ago",
+        "code": "BILL_AMT3",
+        "contribution": -0.052299
+      },
+      {
+        "feature": "Recorded marital-status category",
+        "code": "MARRIAGE",
+        "contribution": -0.045192
+      }
+    ]
+  },
+  "calculations": {
+    "current_utilization_pct": 6.0,
+    "max_utilization_pct": 20.5,
+    "avg_utilization_pct": 8.41,
+    "delinquent_statuses": 6,
+    "repeated_delinquency": true,
+    "max_severity": 3,
+    "payment_coverage_pct": 28.71,
+    "balance_trend_pct": -14.5,
+    "bill_dispersion": 402,
+    "payment_dispersion": 402,
+    "zero_payment_stress": false,
+    "positive_bill_total": 5050,
+    "payment_total": 1450
+  },
+  "data_quality": [
+    "a required input is missing",
+    "a feature is outside the development range",
+    "a demographic category is unknown"
+  ],
+  "recourse": {
+    "current_outcome": "invalid input",
+    "current_outcome_code": "II",
+    "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+    "non_behavioural_blockers": [
+      "required field missing: recorded sex category",
+      "a demographic category is unknown; this cannot be changed by borrower behaviour and routes to human review",
+      "a value is outside the development range; this routes to human review regardless of behaviour"
+    ],
+    "status": "NOT_REACHABLE_BY_BEHAVIOUR"
+  },
+  "explanation": "The decision is invalid input because a required input is missing. The model assigns an 84.3% probability of DEFAULT and places the risk band in high. Key risk-increasing drivers include most recent repayment status and repayment status two months ago, while decreasing risk factors are statement balance three months ago and recorded marital-status category. Calculations show current utilization at 6.0%, max at 20.5%, delinquent statuses at 6, payment coverage at 28.71%, and a balance trend of -14.5%. Data quality flags include a required input is missing, a feature is outside the development range, and a demographic category is unknown. The status is not reachable by behaviour due to blockers including required field missing: recorded sex category, a demographic category is unknown; this cannot be changed by borrower behaviour and routes to human review, and a value is outside the development range; this routes to human review regardless of behaviour. The probability is an association from a benchmark model, not a cause and not a guarantee.",
+  "explanation_status": "VERIFIED",
+  "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+  "receipt": "RECEIPT1|p=UDP1|s=1683276062|q=0.843337848555|o=II|b=H|f=MI,OD,UC|t=IM,DS,RU,RO,RH,CD|c=cu:600,mu:2050,au:841,dc:6,rd:1,ms:3,pc:2871,bt:-1450,bd:402,pd:402,zs:0,pb:5050,pt:1450|xp=PAY_0:1251132146,PAY_2:218428689|xn=BILL_AMT3:-52299113,MARRIAGE:-45192347|r=IM|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+}

@@ -1,0 +1,8 @@
+{
+  "protocol": "compiled-credit-llm/assessment-v1",
+  "status": "REFUSE",
+  "refusal_class": "MALFORMED_TYPE",
+  "reason": "Raw credit values must be integers or explicit nulls.",
+  "language_model_invoked": false,
+  "receipt": "RECEIPT1|status=REFUSE|e=MALFORMED_TYPE|n=Raw credit values must be integers or explicit nulls.|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+}

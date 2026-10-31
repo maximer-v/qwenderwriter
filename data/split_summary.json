@@ -1,0 +1,39 @@
+{
+  "seed": 20261030,
+  "method": "hierarchical stratified train_test_split with fixed exact sizes",
+  "split_sizes": {
+    "train": 18000,
+    "validation": 4500,
+    "calibration": 3000,
+    "test": 4500
+  },
+  "class_counts": {
+    "train": {
+      "rows": 18000,
+      "defaults": 3982,
+      "non_defaults": 14018,
+      "prevalence": 0.2212222222222222
+    },
+    "validation": {
+      "rows": 4500,
+      "defaults": 995,
+      "non_defaults": 3505,
+      "prevalence": 0.22111111111111112
+    },
+    "calibration": {
+      "rows": 3000,
+      "defaults": 664,
+      "non_defaults": 2336,
+      "prevalence": 0.22133333333333333
+    },
+    "test": {
+      "rows": 4500,
+      "defaults": 995,
+      "non_defaults": 3505,
+      "prevalence": 0.22111111111111112
+    }
+  },
+  "overall_prevalence": 0.2212,
+  "feature_policy": "ID excluded; all 23 variables retained; no target-derived features",
+  "evidence_scope": "random-split development evidence; the dataset has no application ordering for a temporal holdout"
+}

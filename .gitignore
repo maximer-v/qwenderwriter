@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+
+# Build outputs (large; regenerate with the scripts or download the released checkpoint)
+artifacts/
+logs/
+data/raw/
+
+# Editors
+.vscode/
+.idea/

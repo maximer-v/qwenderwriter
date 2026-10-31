@@ -1,0 +1,78 @@
+{
+  "rare_eval": {
+    "outcomes": {
+      "DD": 9,
+      "MR": 15
+    },
+    "rows": 24,
+    "variants": {
+      "DX_N": 5,
+      "DZ_N": 3,
+      "RU_N": 10,
+      "RU_O": 6
+    }
+  },
+  "sample_seed": "compiled-credit-llm/rows/v1",
+  "smoke": {
+    "outcomes": {
+      "AC": 1,
+      "AS": 1,
+      "DD": 1,
+      "II": 1,
+      "MR": 1
+    },
+    "rows": 5,
+    "variants": {
+      "M": 1,
+      "N": 4
+    }
+  },
+  "test_rows_used": 0,
+  "train": {
+    "outcomes": {
+      "AC": 200,
+      "AS": 200,
+      "DD": 290,
+      "II": 200,
+      "MR": 500
+    },
+    "rows": 1390,
+    "variants": {
+      "C": 100,
+      "DX_N": 56,
+      "DZ_N": 24,
+      "M": 100,
+      "N": 800,
+      "O": 100,
+      "RU_N": 150,
+      "RU_O": 60
+    }
+  },
+  "validation": {
+    "outcomes": {
+      "AC": 40,
+      "AS": 40,
+      "DD": 40,
+      "II": 40,
+      "MR": 60
+    },
+    "rows": 220,
+    "variants": {
+      "C": 20,
+      "M": 20,
+      "N": 160,
+      "O": 20
+    }
+  },
+  "variant_descriptions": {
+    "C": "contract-invalid negative payment",
+    "DX_N": "natural row with extreme utilization and delinquency",
+    "DZ_N": "natural row with zero payments and high utilization",
+    "M": "one field set to an explicit null",
+    "N": "natural development row",
+    "NULL": "one field set to an explicit null (rare-trigger augmentation)",
+    "O": "age above the development maximum",
+    "RU_N": "natural row with an unknown demographic category",
+    "RU_O": "unknown demographic category and age above the development maximum"
+  }
+}

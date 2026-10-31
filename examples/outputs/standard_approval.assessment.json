@@ -1,0 +1,86 @@
+{
+  "protocol": "compiled-credit-llm/assessment-v1",
+  "status": "OK",
+  "decision": {
+    "outcome_code": "AS",
+    "outcome": "standard demonstration approval",
+    "level": "approve",
+    "controlling_rules": [],
+    "note": "no hard, review or soft rule is active, so the policy reaches standard approval"
+  },
+  "model": {
+    "probability": "0.325180560330",
+    "probability_pct": "32.5%",
+    "risk_band": "moderate",
+    "raw_margin": -0.730065
+  },
+  "policy": {
+    "id": "UCI_DEMO_POLICY_v1",
+    "priority": [
+      "hard",
+      "review",
+      "soft",
+      "approve"
+    ],
+    "active": {
+      "hard": [],
+      "review": [],
+      "soft": []
+    }
+  },
+  "drivers": {
+    "increasing_risk": [
+      {
+        "feature": "Most recent statement balance",
+        "code": "BILL_AMT1",
+        "contribution": 0.279844
+      },
+      {
+        "feature": "Payment amount three months ago",
+        "code": "PAY_AMT3",
+        "contribution": 0.275193
+      }
+    ],
+    "decreasing_risk": [
+      {
+        "feature": "Most recent repayment status",
+        "code": "PAY_0",
+        "contribution": -0.322735
+      },
+      {
+        "feature": "Statement balance three months ago",
+        "code": "BILL_AMT3",
+        "contribution": -0.096385
+      }
+    ]
+  },
+  "calculations": {
+    "current_utilization_pct": 0.0,
+    "max_utilization_pct": 0.0,
+    "avg_utilization_pct": 0.0,
+    "delinquent_statuses": 0,
+    "repeated_delinquency": false,
+    "max_severity": 0,
+    "payment_coverage_pct": 0.0,
+    "balance_trend_pct": 0.0,
+    "bill_dispersion": 0,
+    "payment_dispersion": 0,
+    "zero_payment_stress": false,
+    "positive_bill_total": 0,
+    "payment_total": 0
+  },
+  "data_quality": [
+    "a repayment code is undocumented in the UCI source"
+  ],
+  "recourse": {
+    "current_outcome": "standard demonstration approval",
+    "current_outcome_code": "AS",
+    "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+    "non_behavioural_blockers": [],
+    "status": "ALREADY_BEST"
+  },
+  "explanation": "The decision is standard demonstration approval, with no hard, review, or soft rule active, so policy reaches standard approval. The model probability is 32.5%, placing the case in the moderate risk_band. Key risk-increasing drivers are most recent statement balance and payment amount three months ago, while most recent repayment status and statement balance three months ago reduce risk. Current utilization, max utilization, and average utilization are all zero, with no delinquent statuses or repeated delinquency, and payment coverage is zero. A repayment code is undocumented in the UCI source, affecting data quality. The case is already best, with no further improvement applicable. The probability is an association from a benchmark model, not a cause and not a guarantee.",
+  "explanation_status": "VERIFIED",
+  "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+  "receipt": "RECEIPT1|p=UDP1|s=-730064560|q=0.325180560330|o=AS|b=M|f=UR|t=AS|c=cu:0,mu:0,au:0,dc:0,rd:0,ms:0,pc:0,bt:0,bd:0,pd:0,zs:0,pb:0,pt:0|xp=BILL_AMT1:279843545,PAY_AMT3:275192831|xn=PAY_0:-322735312,BILL_AMT3:-96384893|r=AS|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+}

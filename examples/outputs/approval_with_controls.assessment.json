@@ -1,0 +1,117 @@
+{
+  "protocol": "compiled-credit-llm/assessment-v1",
+  "status": "OK",
+  "decision": {
+    "outcome_code": "AC",
+    "outcome": "approval with controls",
+    "level": "soft",
+    "controlling_rules": [
+      "a rising balance trend"
+    ],
+    "note": "first active level in priority order hard > review > soft > approve"
+  },
+  "model": {
+    "probability": "0.058081307163",
+    "probability_pct": "5.8%",
+    "risk_band": "low",
+    "raw_margin": -2.786075
+  },
+  "policy": {
+    "id": "UCI_DEMO_POLICY_v1",
+    "priority": [
+      "hard",
+      "review",
+      "soft",
+      "approve"
+    ],
+    "active": {
+      "hard": [],
+      "review": [],
+      "soft": [
+        "a rising balance trend"
+      ]
+    }
+  },
+  "drivers": {
+    "increasing_risk": [
+      {
+        "feature": "Credit limit amount",
+        "code": "LIMIT_BAL",
+        "contribution": 0.086802
+      },
+      {
+        "feature": "Statement balance three months ago",
+        "code": "BILL_AMT3",
+        "contribution": 0.075171
+      }
+    ],
+    "decreasing_risk": [
+      {
+        "feature": "Most recent repayment status",
+        "code": "PAY_0",
+        "contribution": -0.46311
+      },
+      {
+        "feature": "Payment amount two months ago",
+        "code": "PAY_AMT2",
+        "contribution": -0.244291
+      }
+    ]
+  },
+  "calculations": {
+    "current_utilization_pct": 60.9,
+    "max_utilization_pct": 71.07,
+    "avg_utilization_pct": 36.08,
+    "delinquent_statuses": 0,
+    "repeated_delinquency": false,
+    "max_severity": 0,
+    "payment_coverage_pct": 22.74,
+    "balance_trend_pct": 54.84,
+    "bill_dispersion": 24021,
+    "payment_dispersion": 2289,
+    "zero_payment_stress": false,
+    "positive_bill_total": 173225,
+    "payment_total": 39396
+  },
+  "data_quality": [
+    "a repayment code is undocumented in the UCI source"
+  ],
+  "recourse": {
+    "current_outcome": "approval with controls",
+    "current_outcome_code": "AC",
+    "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+    "non_behavioural_blockers": [],
+    "status": "REACHABLE",
+    "next_better": {
+      "outcome": "standard demonstration approval",
+      "outcome_code": "AS",
+      "moves_needed": 1,
+      "moves": [
+        "most recent statement balance of at most 28,848 instead of 48,725 (balance growth below 30% of the limit)"
+      ],
+      "fields_changed": 1,
+      "model_after": {
+        "risk_band": "low",
+        "probability_pct": "5.8%"
+      }
+    },
+    "best_reachable": {
+      "outcome": "standard demonstration approval",
+      "outcome_code": "AS",
+      "moves_needed": 1,
+      "moves": [
+        "most recent statement balance of at most 28,848 instead of 48,725 (balance growth below 30% of the limit)"
+      ],
+      "fields_changed": 1,
+      "model_after": {
+        "risk_band": "low",
+        "probability_pct": "5.8%"
+      }
+    },
+    "proximity": "close"
+  },
+  "explanation": "The decision is approval with controls, controlled by a rising balance trend. The model assigns a 5.8% probability of default, placing the risk_band in low. Key risk-increasing drivers include credit limit amount and statement balance three months ago, while decreasing risk factors are most recent repayment status and payment amount two months ago. The balance trend pct is 54.84, current utilization is 60.9%, and payment coverage is 22.74%, with a data-quality flag noting a repayment code is undocumented in the UCI source. The case is close to standard demonstration approval, requiring only one move: reducing the most recent statement balance to at most 28,848 instead of 48,725 to achieve balance growth below 30% of the limit. The probability is an association from a benchmark model, not a cause and not a guarantee.",
+  "explanation_status": "VERIFIED",
+  "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+  "receipt": "RECEIPT1|p=UDP1|s=-2786075081|q=0.058081307163|o=AC|b=L|f=UR|t=CB|c=cu:6090,mu:7107,au:3608,dc:0,rd:0,ms:0,pc:2274,bt:5484,bd:24021,pd:2289,zs:0,pb:173225,pt:39396|xp=LIMIT_BAL:86801866,BILL_AMT3:75170530|xn=PAY_0:-463110267,PAY_AMT2:-244290662|r=CB|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+}

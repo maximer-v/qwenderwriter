@@ -1,0 +1,22 @@
+{
+  "dataset": "Default of Credit Card Clients",
+  "uci_id": 350,
+  "doi": "10.24432/C55S3H",
+  "repository_url": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+  "source_url": "https://archive.ics.uci.edu/ml/machine-learning-databases/00350/default%20of%20credit%20card%20clients.xls",
+  "api_metadata_url": "https://archive.ics.uci.edu/api/dataset?id=350",
+  "retrieved_utc": "2026-10-30T07:43:38Z",
+  "raw_file": "data/raw/default_of_credit_card_clients.xls",
+  "raw_bytes": 5539328,
+  "raw_sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+  "working_csv": "data/processed/default_of_credit_card_clients.csv",
+  "working_csv_sha256": "bf15b02eb5a2c34f01f6d071083ecb7b8f4e803a4280a7ef497903d84c791c48",
+  "conversion": "LibreOffice headless --convert-to csv; raw XLS is preserved unchanged",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "license_evidence": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+  "instances": 30000,
+  "target_positive_count": 6636,
+  "creator": "I-Cheng Yeh",
+  "citation_doi": "10.1016/j.eswa.2007.12.020"
+}

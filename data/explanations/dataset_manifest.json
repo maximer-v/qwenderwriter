@@ -1,0 +1,49 @@
+{
+  "artifact_hashes": {
+    "rare_eval.jsonl": "c0ce68adaf760f113df89fb4600d9eb98453813e94d3fd51d188fda31e5dabb3",
+    "smoke.jsonl": "dcdaba32083b828f50531af68fef844dece6e8e5f2fff433ea24a49b32ad0a32",
+    "train.jsonl": "4e722c4f0de3571975d383361e8c33b72470c9cd5d0cd099d5eb7b0cd95106d7",
+    "validation.jsonl": "415f9533948e3b8707cdd9f55d721185dc77bf99bcec3d53ea0b31511ac3e594"
+  },
+  "counts": {
+    "rare_eval": 21,
+    "smoke": 5,
+    "train": 1252,
+    "validation": 206
+  },
+  "recourse": "computed by the compiled scorer per row and shown to the teacher as proximity facts",
+  "refusal_examples": 0,
+  "sampling": {
+    "max_new_tokens": 300,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "tries": 4
+  },
+  "schema_version": "explanation-targets/v1",
+  "stats": {
+    "attempt1_fail": 292,
+    "attempt1_ok": 1347,
+    "attempt2_fail": 196,
+    "attempt2_ok": 96,
+    "attempt3_fail": 166,
+    "attempt3_ok": 30,
+    "attempt4_fail": 155,
+    "attempt4_ok": 11,
+    "rare_eval_dropped": 3,
+    "rare_eval_kept": 21,
+    "smoke_dropped": 0,
+    "smoke_kept": 5,
+    "train_dropped": 138,
+    "train_kept": 1252,
+    "validation_dropped": 14,
+    "validation_kept": 206,
+    "violation:controlling rule missing": 285,
+    "violation:length": 1,
+    "violation:sentences": 4,
+    "violation:unlicensed numbers": 641
+  },
+  "teacher": "Qwen/Qwen3-4B-Instruct-2507",
+  "test_labels_used": false,
+  "test_rows_used": 0,
+  "verification": "every target passed routing.verify_explanation against its own evidence and recourse"
+}
