@@ -11,7 +11,8 @@
   <img alt="Python 3.11+" src="https://img.shields.io/badge/python-3.11%2B-blue.svg">
   <img alt="Base model: Qwen3.5-0.8B" src="https://img.shields.io/badge/base%20model-Qwen3.5--0.8B-orange.svg">
   <img alt="Tests" src="https://img.shields.io/badge/tests-43%20passing-brightgreen.svg">
-  <img alt="SquareOne Labs" src="https://img.shields.io/badge/by-SquareOne%20Labs-1f4ca0.svg">
+  <img alt="Author: Javier Mancilla" src="https://img.shields.io/badge/author-Javier%20Mancilla-1f4ca0.svg">
+  <img alt="Affiliation: SquareOne Labs" src="https://img.shields.io/badge/affiliation-SquareOne%20Labs-lightgrey.svg">
 </p>
 
 One `from_pretrained` call loads a Qwen3.5-0.8B model whose safetensors file also carries a gradient-boosted scorecard,
@@ -205,4 +206,4 @@ Copyright 2026 Javier Mancilla. Code, documentation and the built artefact: [CC 
 Apache-2.0, the teacher Qwen3-4B-Instruct-2507 is Apache-2.0 and the UCI data is CC BY 4.0; see
 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
-<p align="center"><sub>Built at <b>SquareOne Labs</b>, a frontier technology lab applying generative AI, quantum computing and neuromorphic/thermodynamic computing to financial services.</sub></p>
+<p align="center"><sub>Authored and owned by <b>Javier Mancilla</b>. Pair review by <b>Tomás Tagliani</b>. Both at <b>SquareOne Labs</b>, a frontier technology lab applying generative AI, quantum computing and neuromorphic/thermodynamic computing to financial services.</sub></p>
